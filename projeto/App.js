@@ -42,6 +42,7 @@ class Entrar extends React.Component{
       dia: undefined,
       periodo: undefined,
       dataAtual: new Date(),
+      resultado: undefined,
       options : { weekday: "long" },
     }
   }
@@ -76,20 +77,24 @@ class Entrar extends React.Component{
 
       if(this.state.dia == 'Segunda'){
         if(dataAtual.getDay() == 1){
-          const proximaSegundaData = new Date(dataAtual.getFullYear(), 
-        dataAtual.getMonth(), dataAtual.getDate() + 7);
-          alert(proximaSegundaData);
+          const proximaData = new Date(dataAtual.getFullYear(), 
+          dataAtual.getMonth(), dataAtual.getDate() + 7);
+          alert(proximaData);
         }
         else{
-          const diasParaProximaSegunda = (7 - indexAtual + 1) % 7;
-          const proximaSegundaData = new Date(dataAtual.getFullYear(), 
-        dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaSegunda);
-          alert(proximaSegundaData);
+          const diasParaProximaData = (7 - indexAtual);
+          const proximaData = new Date(dataAtual.getFullYear(), 
+          dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaData);
+          this.setState({resultado: proximaData});
+          alert(proximaData);
+          
         }
           if(this.state.periodo == 'Primeira'){
             await AsyncStorage.setItem('dia', this.state.dia);
             await AsyncStorage.setItem('periodo', this.state.periodo);
-            this.props.navigation.navigate("Home");
+            
+            //alert(resultado);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Segunda'){
@@ -115,15 +120,15 @@ class Entrar extends React.Component{
       
       else if(this.state.dia == 'Terça'){
         if(dataAtual.getDay() == 2){
-          const proximaTercaData = new Date(dataAtual.getFullYear(), 
+          const proximaData = new Date(dataAtual.getFullYear(), 
         dataAtual.getMonth(), dataAtual.getDate() + 7);
-          alert(proximaTercaData);
+          alert(proximaData);
         }
         else{
-          const diasParaProximaTerca = (9 - indexAtual + 1) % 7;
-          const proximaTercaData = new Date(dataAtual.getFullYear(), 
-        dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaTerca);
-          alert(proximaTercaData);
+          const diasParaProximaData = (9 - indexAtual + 1) % 7;
+          const proximaData = new Date(dataAtual.getFullYear(), 
+        dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaData);
+          alert(proximaData);
         }
           if(this.state.periodo == 'Primeira'){
             await AsyncStorage.setItem(this.state.dia, this.state.periodo);
@@ -149,15 +154,15 @@ class Entrar extends React.Component{
       /*QUARTA*/
       else if(this.state.dia == 'Quarta'){
         if(dataAtual.getDay() == 3){
-          const proximaTercaData = new Date(dataAtual.getFullYear(), 
+          const proximaData = new Date(dataAtual.getFullYear(), 
         dataAtual.getMonth(), dataAtual.getDate() + 7);
-          alert(proximaTercaData);
+          alert(proximaData);
         }
         else{
-          const diasParaProximaTerca = (11 - indexAtual + 1) % 7;
-          const proximaTercaData = new Date(dataAtual.getFullYear(), 
-        dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaTerca);
-          alert(proximaTercaData);
+          const diasParaProximaData = (11 - indexAtual + 1) % 7;
+          const proximaData = new Date(dataAtual.getFullYear(), 
+        dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaData);
+          alert(proximaData);
         }
           if(this.state.periodo == 'Primeira'){
             await AsyncStorage.setItem(this.state.dia, this.state.periodo);
@@ -184,15 +189,15 @@ class Entrar extends React.Component{
 
       else if(this.state.dia == 'Quinta'){
         if(dataAtual.getDay() == 2){
-          const proximaTercaData = new Date(dataAtual.getFullYear(), 
+          const proximaData = new Date(dataAtual.getFullYear(), 
         dataAtual.getMonth(), dataAtual.getDate() + 7);
-          alert(proximaTercaData);
+          alert(proximaData);
         }
         else{
-          const diasParaProximaTerca = (13 - indexAtual + 1) % 7;
-          const proximaTercaData = new Date(dataAtual.getFullYear(), 
-        dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaTerca);
-          alert(proximaTercaData);
+          const diasParaProximaData = (13 - indexAtual + 1) % 7;
+          const proximaData = new Date(dataAtual.getFullYear(), 
+        dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaData);
+          alert(proximaData);
         }
           if(this.state.periodo == 'Primeira'){
             await AsyncStorage.setItem(this.state.dia, this.state.periodo);
@@ -219,15 +224,15 @@ class Entrar extends React.Component{
 
       else if(this.state.dia == 'Sexta'){
         if(dataAtual.getDay() == 5){
-          const proximaTercaData = new Date(dataAtual.getFullYear(), 
+          const proximaData = new Date(dataAtual.getFullYear(), 
         dataAtual.getMonth(), dataAtual.getDate() + 7);
-          alert(proximaTercaData);
+          alert(proximaData);
         }
         else{
-          const diasParaProximaTerca = (15 - indexAtual + 1) % 7;
-          const proximaTercaData = new Date(dataAtual.getFullYear(), 
-        dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaTerca);
-          alert(proximaTercaData);
+          const diasParaProximaData = (15 - indexAtual + 1) % 7;
+          const proximaData = new Date(dataAtual.getFullYear(), 
+        dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaData);
+          alert(proximaData);
         }
           if(this.state.periodo == 'Primeira'){
             await AsyncStorage.setItem(this.state.dia, this.state.periodo);
@@ -254,15 +259,15 @@ class Entrar extends React.Component{
 
       else if(this.state.dia == 'Sábado'){
         if(dataAtual.getDay() == 6){
-          const proximaTercaData = new Date(dataAtual.getFullYear(), 
+          const proximaData = new Date(dataAtual.getFullYear(), 
         dataAtual.getMonth(), dataAtual.getDate() + 7);
-          alert(proximaTercaData);
+          alert(proximaData);
         }
         else{
-          const diasParaProximaTerca = (17 - indexAtual + 1) % 7;
-          const proximaTercaData = new Date(dataAtual.getFullYear(), 
-        dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaTerca);
-          alert(proximaTercaData);
+          const diasParaProximaData = (17 - indexAtual + 1) % 7;
+          const proximaData = new Date(dataAtual.getFullYear(), 
+        dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaData);
+          alert(proximaData);
         }
           if(this.state.periodo == 'Primeira'){
             await AsyncStorage.setItem(this.state.dia, this.state.periodo);
@@ -289,15 +294,15 @@ class Entrar extends React.Component{
 
       else if(this.state.dia == 'Domingo'){
         if(dataAtual.getDay() == 2){
-          const proximaTercaData = new Date(dataAtual.getFullYear(), 
+          const proximaData = new Date(dataAtual.getFullYear(), 
         dataAtual.getMonth(), dataAtual.getDate() + 7);
-          alert(proximaTercaData);
+          alert(proximaData);
         }
         else{
-          const diasParaProximaTerca = (19 - indexAtual + 1) % 7;
-          const proximaTercaData = new Date(dataAtual.getFullYear(), 
-        dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaTerca);
-          alert(proximaTercaData);
+          const diasParaProximaData = (19 - indexAtual + 1) % 7;
+          const proximaData = new Date(dataAtual.getFullYear(), 
+        dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaData);
+          alert(proximaData);
         }
           if(this.state.periodo == 'Primeira'){
             await AsyncStorage.setItem(this.state.dia, this.state.periodo);
@@ -333,6 +338,7 @@ class Home extends React.Component{
     this.state={
       day: "",
       period: "",
+      dayNext: ""
     };
   }
   
@@ -340,8 +346,10 @@ class Home extends React.Component{
     try{
       const valueDay = await AsyncStorage.getItem('dia');
       const valuePeriod = await AsyncStorage.getItem('periodo');
+      const valueDayNext = await AsyncStorage.getItem('dataNext');
       this.setState({ day: valueDay })
       this.setState({ period: valuePeriod })
+      this.setState({ dayNext: valueDayNext })
     }catch(erro){
       console.log(erro);
     }
@@ -351,12 +359,13 @@ class Home extends React.Component{
     this.ler();
   }
   
+
   render(){
     return(
       <View style={estilos.container}>
       <Text style={estilos.textoTituloHome}>{"Ciclo atual:"}</Text>
-      <Text>{this.state.day}</Text>
-      <Text>{this.state.period}</Text>
+      <Text style={estilos.variavelDia}>{"Seu dia de troca é: " + this.props.route.params.resultado}</Text>
+      <Text style={estilos.variavelPeriodo}>{"Você está no período: " + this.state.period}</Text>
       <Text>{"Mostrar os dias de troca do ciclo da mulher - Marcar em qual adesivo ela está"}</Text>
       <Text>{"Mostrar sempre que é melhor a mulher comprar o adesivo no terceiro adesivo e na semana de pausa (Colocar um lembrete de compra e colocar algo marcando se ela já comprou o adesivo para a próxima sequência ou não) "}</Text>
       <Text>{"Infos para ajudar a mulher"}</Text>
@@ -366,6 +375,11 @@ class Home extends React.Component{
 }
 
 class Nav2 extends React.Component {
+  constructor(props){
+    super(props)
+    
+  }
+
   render() {
     return (
       <Drawer.Navigator screenOptions={{
@@ -377,6 +391,7 @@ class Nav2 extends React.Component {
       }}>
 
       <Drawer.Screen name="Home" component={Home}
+       initialParams={{ resultado: this.props.route.params.resultado }}
       options={{
         headerTintColor: '#FFFFFF',
         headerStyle: {backgroundColor: '#DC143C'}, /*#FA8072*/
@@ -424,7 +439,7 @@ class App extends React.Component {
       <Stack.Navigator>
         <Stack.Screen name="Início" component={Inicio} options={{headerShown: false}}/>
         <Stack.Screen name="Entrar" component={Entrar} options={{headerShown: false}}/>
-        <Stack.Screen name="Home" component={Nav2} options={{headerShown: false}}/>
+        <Stack.Screen name="Home2" component={Nav2} options={{headerShown: false}}/>
       </Stack.Navigator>
     </NavigationContainer>
     )
@@ -520,9 +535,6 @@ const estilos = StyleSheet.create({
   },
 
   textoTituloHome: {
-    position: 'absolute',
-    top: 50,
-    left: 100,
     textAlign: 'center',
     fontFamily: "Candara Light",
     color: "#DC143C", // Crimson
