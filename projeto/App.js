@@ -77,42 +77,37 @@ class Entrar extends React.Component{
 
       if(this.state.dia == 'Segunda'){
         if(dataAtual.getDay() == 1){
-          const proximaData = new Date(dataAtual.getFullYear(), 
-          dataAtual.getMonth(), dataAtual.getDate() + 7);
-          alert(proximaData);
+          const proximaData = new Date(dataAtual.getMonth(), dataAtual.getDate() + 7);
+          this.setState({resultado: proximaData});
         }
         else{
-          const diasParaProximaData = (7 - indexAtual);
+          const diasParaProximaData = (dataAtual.getDate() + 7 - indexAtual) % 7;
           const proximaData = new Date(dataAtual.getFullYear(), 
           dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaData);
           this.setState({resultado: proximaData});
-          alert(proximaData);
-          
         }
           if(this.state.periodo == 'Primeira'){
             await AsyncStorage.setItem('dia', this.state.dia);
             await AsyncStorage.setItem('periodo', this.state.periodo);
-            
-            //alert(resultado);
             this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Segunda'){
             await AsyncStorage.setItem('dia', this.state.dia);
             await AsyncStorage.setItem('periodo', this.state.periodo);
-            this.props.navigation.navigate("Home");
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Terceira'){
             await AsyncStorage.setItem('dia', this.state.dia);
             await AsyncStorage.setItem('periodo', this.state.periodo);
-            this.props.navigation.navigate("Home");
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Semana de pausa'){
             await AsyncStorage.setItem('dia', this.state.dia);
             await AsyncStorage.setItem('periodo', this.state.periodo);
-            this.props.navigation.navigate("Home");
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
       }
       
@@ -122,32 +117,36 @@ class Entrar extends React.Component{
         if(dataAtual.getDay() == 2){
           const proximaData = new Date(dataAtual.getFullYear(), 
         dataAtual.getMonth(), dataAtual.getDate() + 7);
-          alert(proximaData);
+          this.setState({resultado: proximaData});
         }
         else{
-          const diasParaProximaData = (9 - indexAtual + 1) % 7;
+          const diasParaProximaData = (dataAtual.getDate() + 7 - indexAtual) % 7;
           const proximaData = new Date(dataAtual.getFullYear(), 
         dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaData);
-          alert(proximaData);
+          this.setState({resultado: proximaData});
         }
           if(this.state.periodo == 'Primeira'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Segunda'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Terceira'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Semana de pausa'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
       }
       
@@ -156,32 +155,36 @@ class Entrar extends React.Component{
         if(dataAtual.getDay() == 3){
           const proximaData = new Date(dataAtual.getFullYear(), 
         dataAtual.getMonth(), dataAtual.getDate() + 7);
-          alert(proximaData);
+          this.setState({resultado: proximaData});
         }
         else{
-          const diasParaProximaData = (11 - indexAtual + 1) % 7;
+          const diasParaProximaData = (dataAtual.getDate() + 7 - indexAtual) % 7;
           const proximaData = new Date(dataAtual.getFullYear(), 
         dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaData);
-          alert(proximaData);
+          this.setState({resultado: proximaData});
         }
           if(this.state.periodo == 'Primeira'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Segunda'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Terceira'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Semana de pausa'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
       }
 
@@ -191,32 +194,36 @@ class Entrar extends React.Component{
         if(dataAtual.getDay() == 2){
           const proximaData = new Date(dataAtual.getFullYear(), 
         dataAtual.getMonth(), dataAtual.getDate() + 7);
-          alert(proximaData);
+          this.setState({resultado: proximaData});
         }
         else{
-          const diasParaProximaData = (13 - indexAtual + 1) % 7;
+          const diasParaProximaData = (dataAtual.getDate() + 7 - indexAtual) % 7;
           const proximaData = new Date(dataAtual.getFullYear(), 
         dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaData);
-          alert(proximaData);
+          this.setState({resultado: proximaData});
         }
           if(this.state.periodo == 'Primeira'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Segunda'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Terceira'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Semana de pausa'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
       }
 
@@ -226,32 +233,36 @@ class Entrar extends React.Component{
         if(dataAtual.getDay() == 5){
           const proximaData = new Date(dataAtual.getFullYear(), 
         dataAtual.getMonth(), dataAtual.getDate() + 7);
-          alert(proximaData);
+          this.setState({resultado: proximaData});
         }
         else{
-          const diasParaProximaData = (15 - indexAtual + 1) % 7;
+          const diasParaProximaData = (dataAtual.getDate() + 7 - indexAtual) % 7;
           const proximaData = new Date(dataAtual.getFullYear(), 
         dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaData);
-          alert(proximaData);
+          this.setState({resultado: proximaData});
         }
           if(this.state.periodo == 'Primeira'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Segunda'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Terceira'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Semana de pausa'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
       }
 
@@ -261,32 +272,36 @@ class Entrar extends React.Component{
         if(dataAtual.getDay() == 6){
           const proximaData = new Date(dataAtual.getFullYear(), 
         dataAtual.getMonth(), dataAtual.getDate() + 7);
-          alert(proximaData);
+          this.setState({resultado: proximaData});
         }
         else{
-          const diasParaProximaData = (17 - indexAtual + 1) % 7;
+          const diasParaProximaData = (dataAtual.getDate() + 7 - indexAtual) % 7;
           const proximaData = new Date(dataAtual.getFullYear(), 
         dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaData);
-          alert(proximaData);
+          this.setState({resultado: proximaData});
         }
           if(this.state.periodo == 'Primeira'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Segunda'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Terceira'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Semana de pausa'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
       }
 
@@ -296,27 +311,30 @@ class Entrar extends React.Component{
         if(dataAtual.getDay() == 2){
           const proximaData = new Date(dataAtual.getFullYear(), 
         dataAtual.getMonth(), dataAtual.getDate() + 7);
-          alert(proximaData);
+          this.setState({resultado: proximaData});
         }
         else{
-          const diasParaProximaData = (19 - indexAtual + 1) % 7;
+          const diasParaProximaData = (dataAtual.getDate() + 7 - indexAtual) % 7;
           const proximaData = new Date(dataAtual.getFullYear(), 
         dataAtual.getMonth(), dataAtual.getDate() + diasParaProximaData);
-          alert(proximaData);
+          this.setState({resultado: proximaData});
         }
           if(this.state.periodo == 'Primeira'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Segunda'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Terceira'){
-            await AsyncStorage.setItem(this.state.dia, this.state.periodo);
-            this.props.navigation.navigate("Home");
+            await AsyncStorage.setItem('dia', this.state.dia);
+            await AsyncStorage.setItem('periodo', this.state.periodo);
+            this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
           }
 
           else if(this.state.periodo == 'Semana de pausa'){
@@ -338,7 +356,6 @@ class Home extends React.Component{
     this.state={
       day: "",
       period: "",
-      dayNext: ""
     };
   }
   
@@ -346,10 +363,8 @@ class Home extends React.Component{
     try{
       const valueDay = await AsyncStorage.getItem('dia');
       const valuePeriod = await AsyncStorage.getItem('periodo');
-      const valueDayNext = await AsyncStorage.getItem('dataNext');
       this.setState({ day: valueDay })
       this.setState({ period: valuePeriod })
-      this.setState({ dayNext: valueDayNext })
     }catch(erro){
       console.log(erro);
     }
@@ -359,16 +374,13 @@ class Home extends React.Component{
     this.ler();
   }
   
-
   render(){
     return(
       <View style={estilos.container}>
       <Text style={estilos.textoTituloHome}>{"Ciclo atual:"}</Text>
-      <Text style={estilos.variavelDia}>{"Seu dia de troca é: " + this.props.route.params.resultado}</Text>
+      <Text style={estilos.variavelDia}>{"Seu próximo dia de troca é: " + this.props.route.params.resultado}</Text>
       <Text style={estilos.variavelPeriodo}>{"Você está no período: " + this.state.period}</Text>
-      <Text>{"Mostrar os dias de troca do ciclo da mulher - Marcar em qual adesivo ela está"}</Text>
-      <Text>{"Mostrar sempre que é melhor a mulher comprar o adesivo no terceiro adesivo e na semana de pausa (Colocar um lembrete de compra e colocar algo marcando se ela já comprou o adesivo para a próxima sequência ou não) "}</Text>
-      <Text>{"Infos para ajudar a mulher"}</Text>
+      <Text>{"Mostrar os dias de troca do ciclo da mulher - Marcar em qual adesivo ela está"}</Text> 
     </View>
     )
   }
@@ -377,7 +389,6 @@ class Home extends React.Component{
 class Nav2 extends React.Component {
   constructor(props){
     super(props)
-    
   }
 
   render() {
@@ -516,7 +527,6 @@ const estilos = StyleSheet.create({
     fontFamily: "Trirong",
     color: "#000000", // Black
     fontSize: 15,
-    padding: 10
   },
 
   buttonHome: {
@@ -540,6 +550,21 @@ const estilos = StyleSheet.create({
     color: "#DC143C", // Crimson
     fontSize: 25
   },
+
+  variavelDia: {
+    textAlign: 'center',
+    fontFamily: "Trirong",
+    color: "#000000", // Black
+    fontSize: 15,
+  },
+
+  variavelPeriodo: {
+    textAlign: 'center',
+    fontFamily: "Trirong",
+    color: "#000000", // Black
+    fontSize: 15,
+  },
+
 })
 
 export default App;
