@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, TextInput, View, StyleSheet, TouchableOpacity} from 'react-native';
+import { Text, TextInput, View, StyleSheet, TouchableOpacity, Vibration} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -18,6 +18,10 @@ const Spacer = ({ size }) => {
   return <View style={{ height: size }} />;
 };
 
+const handleVibration = () => {
+    Vibration.vibrate(1000); // Vibra por 100 milissegundos
+};
+
 class Inicio extends React.Component{
   render(){
     return(
@@ -30,7 +34,9 @@ class Inicio extends React.Component{
     </View>
     )
   }
+
   goToEntrar(){
+    handleVibration();
     this.props.navigation.navigate("Entrar");
   }
 }
@@ -43,6 +49,9 @@ class Entrar extends React.Component{
       periodo: undefined,
       dataAtual: new Date(),
       resultado: undefined,
+      resultado2: undefined,
+      resultado3: undefined,
+      resultadoSP: undefined,
       options : { weekday: "long" },
     }
   }
@@ -87,9 +96,20 @@ class Entrar extends React.Component{
           this.setState({resultado: proximaData});
         }
           if(this.state.periodo == 'Primeira'){
+            /*
+            const proximaData2 = new Date(dataAtual.getMonth(), resultado.getDate() + 7);
+            const proximaData3 = new Date(dataAtual.getMonth(), proximaData2.getDate() + 7);
+            const proximaDataSP = new Date(dataAtual.getMonth(), proximaData3.getDate() + 7);
+            this.setState({resultado2: proximaData2});
+            this.setState({resultado3: proximaData3});
+            this.setState({resultadoSP: proximaDataSP});
+            */
             await AsyncStorage.setItem('dia', this.state.dia);
             await AsyncStorage.setItem('periodo', this.state.periodo);
             this.props.navigation.navigate("Home2", {resultado: this.state.resultado});
+            this.props.navigation.navigate("Home2", {resultado2: this.state.resultado2});
+            this.props.navigation.navigate("Home2", {resultado3: this.state.resultado3});
+            this.props.navigation.navigate("Home2", {resultadoSP: this.state.resultadoSP});
           }
 
           else if(this.state.periodo == 'Segunda'){
@@ -378,8 +398,11 @@ class Home extends React.Component{
     return(
       <View style={estilos.container}>
       <Text style={estilos.textoTituloHome}>{"Ciclo atual:"}</Text>
+      <Spacer size={20} />
       <Text style={estilos.variavelDia}>{"Seu próximo dia de troca é: " + this.props.route.params.resultado}</Text>
-      <Text style={estilos.variavelPeriodo}>{"Você está no período: " + this.state.period}</Text>
+      <Spacer size={20} />
+      <Text style={estilos.variavelPeriodo}>{"Você está na troca: " + this.state.period}</Text>
+      <Spacer size={20} />
       <Text>{"Mostrar os dias de troca do ciclo da mulher - Marcar em qual adesivo ela está"}</Text> 
     </View>
     )
@@ -402,7 +425,7 @@ class Nav2 extends React.Component {
       }}>
 
       <Drawer.Screen name="Home" component={Home}
-       initialParams={{ resultado: this.props.route.params.resultado }}
+       initialParams={{ resultado: this.props.route.params.resultado}}
       options={{
         headerTintColor: '#FFFFFF',
         headerStyle: {backgroundColor: '#DC143C'}, /*#FA8072*/
