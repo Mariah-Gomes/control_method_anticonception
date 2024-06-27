@@ -1,6 +1,27 @@
 # Control Method Anticonception
 
-## Funcionalidade 
+Antes mostra algumas informações do projeto
+
+> Status do projeto: Finalizado
+
+> Esse projeto nos foi proposto no 4ºSemestre na disciplina de Computação Móvel
+
+> Programei no Expo.dev e depois subi o projeto recentemente para o git
+
+### Tópicos
+
+🔹[Descrição do Projeto](#pencil-descrição-do-projeto)
+
+🔹[Funcionalidade](#mag_right-funcionalidade)
+
+🔹[Tecnologias Utilizadas](#computer-tecnologias-utilizadas)
+
+🔹[Desenvolvedores](#busts_in_silhouette-desenvolvedores)
+
+## :pencil: Descrição do Projeto
+Aqui a gente escreve um ou dois parágrafos explicando o projeto
+
+## :mag_right: Funcionalidade
 
 1. O aplicativo se inícia com uma tela inicial para a usuária clicar no botão de entrar e iniciar o app, quando clica no botão o celular do usuário vibra.
 
