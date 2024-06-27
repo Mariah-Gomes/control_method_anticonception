@@ -1,4 +1,4 @@
-# CompMovel2
+# Control Method Anticonception
 
 ## Funcionalidade 
 
@@ -27,3 +27,11 @@ A home mostra algumas informações importantes para a mulher e essa tela possui
 5. Se a mulher escolher a página "Onde Colar?" ela é encaminhada para uma página onde mostra os 4 possíveis lugares para colar e como ela pode colar nesses lugares.
 
 ![image](https://github.com/Mariah-Gomes/CompMovel2/assets/141663285/894f024d-7527-43b2-aaff-d4eb60621160)
+
+## :computer: Tecnologias Utilizadas
+- Programei o app utilizando React
+- Na plataforma Expo.dev
+
+## :busts_in_silhouette: Desenvolvedores
+| [<img loading="lazy" src="https://github.com/Mariah-Gomes/ProjetoCompMovel1/assets/141663285/e6827fd1-d8fe-4740-b6fc-fbbfccd05752" width=115><br><sub>Mariah Santos Gomes</sub>](https://github.com/Mariah-Gomes) |
+| :---: | 
