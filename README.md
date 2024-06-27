@@ -2,7 +2,7 @@
 
 Antes mostra algumas informações do projeto
 
-> Status do projeto: algumas funcionalidades estão faltando
+> Status do projeto: Algumas funcionalidades estão faltando
 
 > Esse projeto nos foi proposto no 4ºSemestre na disciplina de Computação Móvel
 
