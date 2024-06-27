@@ -2,7 +2,7 @@
 
 Antes mostra algumas informações do projeto
 
-> Status do projeto: Finalizado
+> Status do projeto: algumas funcionalidades estão faltando
 
 > Esse projeto nos foi proposto no 4ºSemestre na disciplina de Computação Móvel
 
@@ -19,7 +19,7 @@ Antes mostra algumas informações do projeto
 🔹[Desenvolvedores](#busts_in_silhouette-desenvolvedores)
 
 ## :pencil: Descrição do Projeto
-Aqui a gente escreve um ou dois parágrafos explicando o projeto
+Esse aplicativo busca auxiliar mulheres que utilizam o adesivo anticoncepcional, ou mais conhecido como Evra. Ele tem como principal objetivo lembrar a mulher de trocar o adesivo, já como um ciclo dele você tem que trocar o adesivo três vezes e fica uma semana sem que chamamos a semana de pausa. Por isso, esse app tem como principal objetivo lembrar a mulher de trocar o adesivo, fazer os cálculos e mostrar em qual semana a mulher está e entre outras funcionalidades para facilitar a mulher o uso do adesivo anticoncepcional, como, onde colar e onde comprar.
 
 ## :mag_right: Funcionalidade
 
