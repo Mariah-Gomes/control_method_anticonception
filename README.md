@@ -33,19 +33,19 @@ Esse aplicativo busca auxiliar mulheres que utilizam o adesivo anticoncepcional,
 
 ![image](https://github.com/Mariah-Gomes/CompMovel2/assets/141663285/c1b49354-f292-4629-acba-3fa01f31a0a4)
 
-A home mostra algumas informações importantes para a mulher e essa tela possui uma barra lateral onde pode navegar pelo app por lá.
+3. A home mostra algumas informações importantes para a mulher e essa tela possui uma barra lateral onde pode navegar pelo app por lá.
 
 ![image](https://github.com/Mariah-Gomes/CompMovel2/assets/141663285/ea81ffb6-09ac-4d60-bff5-f8e3519179b0)
 
-3. Se a mulher escolher a página "Sair" ela é encaminhada para uma página para sair do app.
+4. Se a mulher escolher a página "Sair" ela é encaminhada para uma página para sair do app.
 
 ![image](https://github.com/Mariah-Gomes/CompMovel2/assets/141663285/61eaeecd-e9ce-4180-be4b-4a00aaf24712)
 
-4. Se a mulher escolher a página "Compras" monstra uma página com três links de farmácias boas para ela comprar o adesivo de maneira online onde é mais barato.
+5. Se a mulher escolher a página "Compras" monstra uma página com três links de farmácias boas para ela comprar o adesivo de maneira online onde é mais barato.
 
 ![image](https://github.com/Mariah-Gomes/CompMovel2/assets/141663285/64a3a28f-252d-47ed-baf7-60a909fbb629)
 
-5. Se a mulher escolher a página "Onde Colar?" ela é encaminhada para uma página onde mostra os 4 possíveis lugares para colar e como ela pode colar nesses lugares.
+6. Se a mulher escolher a página "Onde Colar?" ela é encaminhada para uma página onde mostra os 4 possíveis lugares para colar e como ela pode colar nesses lugares.
 
 ![image](https://github.com/Mariah-Gomes/CompMovel2/assets/141663285/894f024d-7527-43b2-aaff-d4eb60621160)
 
